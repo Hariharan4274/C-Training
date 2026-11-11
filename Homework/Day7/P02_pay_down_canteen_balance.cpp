@@ -1,24 +1,21 @@
-// PDF Q2 - Pay down a canteen balance
-// IDEA: Keep paying (up to the limit) while money is still owed. If the balance is smaller than the limit, pay just the balance.
-
-#include <iostream>   // gives us cout (to print on the screen)
-using namespace std;  // so we can write cout instead of std::cout
+#include <iostream>
+using namespace std;
 
 int main() {
-    int balance = 85;   // money still owed
-    int limit = 20;     // maximum payment per visit
-    int visits = 0;     // how many visits so far
+    int balance = 85;
+    int limit = 20;
+    int visits = 0;
 
-    while (balance > 0) {            // repeat while something is still owed
+    while (balance > 0) {
         int payment;
         if (balance < limit) {
-            payment = balance;       // last visit: pay only what is left
+            payment = balance;
         } else {
-            payment = limit;         // normal visit: pay the full limit
+            payment = limit;
         }
-        cout << payment << endl;     // show the payment
-        balance = balance - payment; // owe less now
-        visits = visits + 1;         // one more visit done
+        cout << payment << endl;
+        balance = balance - payment;
+        visits = visits + 1;
     }
 
     cout << "Visits = " << visits << endl;

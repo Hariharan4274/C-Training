@@ -1,8 +1,5 @@
-// DOCX Q12 - Stamp workshop passes
-// IDEA: Count from 1 to the number of participants, printing each pass number.
-
-#include <iostream>   // gives us cout (to print on the screen)
-using namespace std;  // so we can write cout instead of std::cout
+#include <iostream>   
+using namespace std;  
 
 int main() {
     int participants = 6;

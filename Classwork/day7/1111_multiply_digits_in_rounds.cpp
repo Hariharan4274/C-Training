@@ -1,24 +1,20 @@
-// DOCX Q5 - Multiply digits in rounds
-// IDEA: Outer while = one round per pass. Inner while = multiply all digits of the number. Repeat until 1 digit is left.
-
-#include <iostream>   // gives us cout (to print on the screen)
-using namespace std;  // so we can write cout instead of std::cout
-
+#include <iostream>  
+using namespace std; 
 int main() {
     int number = 39;
     int rounds = 0;
 
-    while (number >= 10) {               // 10 or more = at least two digits
+    while (number >= 10) {              
         int copy = number;
-        int product = 1;                 // start at 1 EVERY round (not 0!)
+        int product = 1;                 
 
         while (copy > 0) {
-            int digit = copy % 10;       // last digit
-            product = product * digit;   // multiply it in
-            copy = copy / 10;            // remove it
+            int digit = copy % 10;       
+            product = product * digit;   
+            copy = copy / 10;           
         }
 
-        number = product;                // the product becomes the new number
+        number = product;               
         rounds = rounds + 1;
     }
 

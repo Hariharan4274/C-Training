@@ -1,18 +1,15 @@
-// PDF Q7 - Count printer batches
-// IDEA: While pages are waiting, print a batch. A batch is the capacity, or whatever pages remain if fewer.
-
-#include <iostream>   // gives us cout (to print on the screen)
-using namespace std;  // so we can write cout instead of std::cout
+#include <iostream>   
+using namespace std;  
 
 int main() {
-    int pages = 14;      // pages waiting
-    int capacity = 5;    // pages one batch can print
+    int pages = 14;      
+    int capacity = 5;    
     int batches = 0;
 
-    while (pages > 0) {                 // check BEFORE each batch
+    while (pages > 0) {                
         int printed;
         if (pages < capacity) {
-            printed = pages;            // last batch prints only what is left
+            printed = pages;         
         } else {
             printed = capacity;
         }

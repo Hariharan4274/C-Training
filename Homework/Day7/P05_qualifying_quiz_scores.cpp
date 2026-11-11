@@ -1,22 +1,19 @@
-// PDF Q5 - Count qualifying quiz scores
-// IDEA: Make the scores 30, 40, 50 ... with a loop. Only scores that are 60 or more are printed, counted and added.
-
-#include <iostream>   // gives us cout (to print on the screen)
-using namespace std;  // so we can write cout instead of std::cout
+#include <iostream>  
+using namespace std;  
 
 int main() {
-    int scores = 5;       // how many scores
-    int score = 30;       // the first score
-    int qualified = 0;    // how many reached the cutoff
-    int sum = 0;          // total of the qualifying scores
+    int scores = 5;       
+    int score = 30;      
+    int qualified = 0;    
+    int sum = 0;    
 
     for (int i = 1; i <= scores; i++) {
-        if (score >= 60) {                 // >= means "at least", so 60 is included
+        if (score >= 60) {                 
             cout << score << endl;
             qualified = qualified + 1;
             sum = sum + score;
         }
-        score = score + 10;                // next score is 10 higher
+        score = score + 10;                
     }
 
     cout << "Qualified = " << qualified << endl;
