@@ -13,7 +13,7 @@ int main() {
         } else {
             printed = capacity;
         }
-        pages = pages - printed;        // those pages are done
+        pages = pages - printed;        
         batches = batches + 1;
         cout << "Pages remaining = " << pages << endl;
     }
